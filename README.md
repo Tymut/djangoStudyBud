@@ -4,4 +4,4 @@
 
 ### Don't take this as my own serious project ;D
 
-### Skończyłeś w 5:53:00 - DRF
+### Skończyłeś w 6:25:40 - Customizing User model
