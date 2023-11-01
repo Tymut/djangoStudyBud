@@ -4,4 +4,3 @@
 
 ### Don't take this as my own serious project ;D
 
-### Skończyłeś w 6:55:00 po makemigrations
