@@ -61,7 +61,7 @@
             <div class="room__header scroll">
               <div class="room__info">
                 <h3>{{room.name}}</h3>
-                <span>{{room.created|timesince}}</span>
+                <span>{{room.created|timesince}} ago</span>
               </div>
               <div class="room__hosted">
                 <p>Hosted By</p>
@@ -72,11 +72,9 @@
                   <span>@{{room.host.username}}</span>
                 </a>
               </div>
-              <!-- <div class="room__details">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, tenetur laudantium? Dicta repellendus
-                rerum consectetur, voluptatem repudiandae eum ea porro cupiditate provident nulla, deserunt, ab ipsum
-                corporis laboriosam deleniti molestias?
-              </div> -->
+              <div class="room__details">
+                {{room.description}}
+              </div>
               <span class="room__topics">{{room.topic}}</span>
             </div>
             <div class="room__conversation">
@@ -130,7 +128,7 @@
             {% for participant in participants %}
             <a href="{% url 'user-profile' user.id %}" class="participant">
               <div class="avatar avatar--medium">
-                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+                <img src="{{participant.avatar.url}}" />
               </div>
               <p>
                 {{participant.username}}
