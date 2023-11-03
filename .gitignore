@@ -1,2 +1,4 @@
 /env
 /static/images/userImages
+/base/__pycache__/
+/base/api/__pycache__/

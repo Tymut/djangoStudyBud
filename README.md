@@ -4,4 +4,4 @@
 
 ### Don't take this as my own serious project ;D
 
-### TODO: Poczas tworzenia pokoju dodać autora do participants / Pozbyć się niepotrzebnych plików / Usunąć dane z bazy
+### TODO: Dodaj autora do participants w feed_component / Pozbyć się niepotrzebnych plików / Usunąć dane z bazy

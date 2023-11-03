@@ -66,6 +66,7 @@ def room(request, pk):
     room = Room.objects.get(id=pk)
     roomMessages = room.message_set.all()
     participants = room.participants.all()
+    room.participants.add(room.host)
     if request.method == 'POST':
         message = Message.objects.create(
             user=request.user,
@@ -123,12 +124,13 @@ def updateRoom(request, pk):
 @login_required(login_url='login')
 def deleteRoom(request, pk):
     room = Room.objects.get(id=pk)
-
+    topic = Topic.objects.get(name=room.topic)
     if request.user != room.host:
         return HttpResponse('You are not allowed here!')
 
     if request.method == 'POST':
         room.delete()
+        topic.delete()
         return redirect('home')
     return render(request, 'base/delete.html', {'obj':room})
 
